@@ -4,5 +4,5 @@ node_js:
 after_success:
   - chmod 600 .travis/deploy_key.pem
   - ssh-add .travis/deploy_key.pem
-  - ssh  -o StrictHostKeyChecking=no forum.noscoapp.com touch test123
+  - ssh  -o StrictHostKeyChecking=no elias@forum.noscoapp.com touch test123
 
