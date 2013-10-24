@@ -1,4 +1,8 @@
 language: node_js
 node_js:
   - "0.10"
+after_success:
+  - chmod 600 .travis/deploy_key.pem
+  - ssh-add .travis/deploy_key.pem
+  - ssh forum.noscoapp.com touch test123
 
